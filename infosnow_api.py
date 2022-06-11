@@ -78,7 +78,7 @@ def get_infosnow_data (resort_id, season):
 
             if ' &bull; ' in name:
                 point = name.find(' &bull; ')
-                label = name[:point]
+                label = name[:point].strip()
                 name = name[point + 8:]
             else:
                 label = None
