@@ -55,7 +55,6 @@ def get_infosnow_data (resort_id, season):
         if next_data < 0:
             next_data = html.find('<img class="isAPG"', position)
 
-        print(f'Started Header: {header}')
         while next_entry < next_data:  # Gets each entry and adds it's information to data
             next_entry = html.find('~apgmontagne/pub/pics/state/3/', next_entry)
             next_entry = html.find(' alt="', next_entry)
